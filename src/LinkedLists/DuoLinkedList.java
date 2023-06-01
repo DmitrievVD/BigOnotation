@@ -1,3 +1,5 @@
+package LinkedLists;
+
 public class DuoLinkedList {
     public static class Node{
         Node next;
