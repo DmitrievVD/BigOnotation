@@ -8,7 +8,7 @@ public class DuoLinkedList {
     }
     static Node head;
     static Node teil;
-    public static void add(int value){
+    public void add(int value){
         Node newNode = new Node();
         newNode.value = value;
         if (head != null){
@@ -18,7 +18,7 @@ public class DuoLinkedList {
         head = newNode;
     }
 
-    public static void remove(){
+    public void remove(){
         if (head != null && head.next != null){
             head = head.next;
             head.previus = null;
@@ -28,7 +28,7 @@ public class DuoLinkedList {
         }
     }
 
-    public static void addEnd(int value){
+    public void addEnd(int value){
         Node newNode = new Node();
         newNode.value = value;
         if (head == null){
@@ -41,7 +41,7 @@ public class DuoLinkedList {
         }
     }
 
-    public static void removeEnd(){ // Удаление последнего элемента
+    public void removeEnd(){ // Удаление последнего элемента
         if (head != null && head.next != null){
             teil = teil.previus;
             teil.next = null;
@@ -51,7 +51,7 @@ public class DuoLinkedList {
         }
     }
 
-    public static void sortBuble(){ // Сортировка списка пузырьком
+    public void sortBuble(){ // Сортировка списка пузырьком
         boolean sort = true;
         while (sort){
             sort = false;
@@ -69,7 +69,7 @@ public class DuoLinkedList {
         }
     }
 
-    public static void revert(){ // Разварот двухсвязвнного списка
+    public void revert(){ // Разварот двухсвязвнного списка
         Node correntNode = head;
         while (correntNode != null){
             Node next = correntNode.next;

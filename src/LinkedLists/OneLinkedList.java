@@ -8,7 +8,7 @@ public class OneLinkedList {
 
     static Node head;
 
-    public static void add(int value){
+    public void add(int value){
         Node newNode = new Node();
         newNode.value = value;
         if (head != null) newNode.next = head;
@@ -63,7 +63,7 @@ public class OneLinkedList {
         }
     }
 
-    public static void revert(Node currentNode, Node previousNode){
+    public void revert(Node currentNode, Node previousNode){
         if (currentNode.next == null) head = currentNode;
         else revert(currentNode.next, currentNode);
         currentNode.next =previousNode;
